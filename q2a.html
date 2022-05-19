@@ -10,17 +10,186 @@
 
   </head>
   <body>
-    <h1>Add Event zx203482</h1>
+    <h1><img src="OUWC-logos.jpeg" alt="Open University Walking Club logo" style="width:100px;height:100px;"/>OU Walking Club Admin App</h1>
+<hr>
+<div class = "topnav">
+
+  <a href="placeholder.html">Overview</a>
+
+<a href="q2a.html">Add Event</a>
+
+<a href="placeholder.html">Add News Item</a>
+
+<a href="placeholder.html">Send Announcement</a>
+
+<a href="placeholder.html">Manage Memberships</a>
+
+</div>
+<hr>
     <main>
-      dfgfgdfhhh
-      gguygukg
-      <section id="text" class="button">
-        <button type="button">Add entry</button>
-      </section>
-      <section id="image" class="button">
-        <button type="button">Add photo</button>
-        <input type="file" accept="image/*" />
-      </section>
+      <form
+        method="POST"
+        onsubmit="return validateForm();"
+        action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php"
+      >
+
+      <fieldset>
+        <legend>Event Details</legend>
+        <p>
+          <label for="eventtitle">Title of Event</label>
+          <input
+            type="text"
+            name="eventtitle"
+            id="eventtitle"
+            maxlength="50"
+            minlength="10"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_eventtitle"></span>
+        </p>
+        <p>
+          <label for="eventtype">Type of Event</label>
+
+            <input type="radio" name="eventtype" id="walk" value="walk" checked />
+            <label for="walk">Walk</label>
+            <input type="radio" name="eventtype" id="social" value="social" />
+            <label for="social">Social</label>
+
+          <span id="feedback_telmobile"></span>
+        </p>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>When and Where?</legend>
+        <p>
+          <label for="date">Date</label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            maxlength="50"
+            minlength="10"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_date"></span>
+        </p>
+        <p>
+          <label for="starttime">Start time</label>
+          <input
+            type="time"
+            name="starttimes"
+            id="starttime"
+            maxlength="20"
+            minlength="10"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_starttime"></span>
+        </p>
+        <p>
+          <label for="endtime">End time</label>
+          <input
+            type="time"
+            name="endtime"
+            id="endtime"
+            required
+            maxlength="100"
+            minlength="2"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_endtime"></span>
+        </p>
+        <p>
+          <label for="meetingpoint">Meeting point</label>
+          <input
+            type="text"
+            name="meetingpoint"
+            id="meetingpoint"
+            required
+            maxlength="100"
+            minlength="2"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_meetingpoint"></span>
+        </p>
+      </fieldset>
+
+
+
+      <fieldset>
+        <legend>Further Information</legend>
+        <p>
+          <label for="distance">Distance in km</label>
+          <input
+            type="number"
+            name="distance"
+            id="distance"
+            maxlength="50"
+            minlength="10"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_distance"></span>
+        </p>
+        <p>
+          <label for="leadername">Name of Leader</label>
+          <input
+            type="text"
+            name="leadername"
+            id="leadername"
+            maxlength="50"
+            minlength="10"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_leadername"></span>
+        </p>
+        <p>
+          <label for="comments">Comments</label>
+          <input
+            type="text"
+            name="commemts"
+            id="comments"
+            maxlength="20"
+            minlength="10"
+            value=""
+            onchange="validate(event.target)"
+          />
+          <span id="feedback_comments"></span>
+        </p>
+        <p>
+          <label for="status">Status</label>
+          <input
+            list="statuslist" name="status" id="status"
+            <datalist id="statuslist">
+              <option value="Proposed">
+              <option value="Approved">
+              <option value="Rejected">
+            </datalist>
+
+
+
+          />
+          <span id="feedback_status"></span>
+        </p>
+        <p>
+          <label for="publish">Publish to website?</label>
+
+            <input type="radio" name="publish" id="yes" value="yes"/>
+            <label for="walk">Yes</label>
+            <input type="radio" name="publish" id="no" value="no" checked/>
+            <label for="social">No</label>
+
+          <span id="feedback_telmobile"></span>
+        </p>
+      </fieldset>
+
+
     </main>
   </body>
 </html>
